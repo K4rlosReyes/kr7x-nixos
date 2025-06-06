@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1418298959325588-1</unique-id>
+	<command>kitty --working-directory %f</command>
+	<description>Open terminal in this directory</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>applications-development</icon>
+	<name>Open with VS Code</name>
+	<unique-id>1418298959325588-2</unique-id>
+	<command>code %f</command>
+	<description>Open with Visual Studio Code</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+	<text-files/>
+	<other-files/>
+</action>
+<action>
+	<icon>text-editor</icon>
+	<name>Edit with Neovim</name>
+	<unique-id>1418298959325588-3</unique-id>
+	<command>kitty -e nvim %f</command>
+	<description>Edit file with Neovim in terminal</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<text-files/>
+	<other-files/>
+</action>
+<action>
+	<icon>image-x-generic</icon>
+	<name>Set as Wallpaper</name>
+	<unique-id>1418298959325588-4</unique-id>
+	<command>hyprctl hyprpaper wallpaper ,%f</command>
+	<description>Set image as wallpaper</description>
+	<patterns>*.jpg;*.jpeg;*.png;*.bmp;*.webp</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>edit-copy</icon>
+	<name>Copy Path</name>
+	<unique-id>1418298959325588-5</unique-id>
+	<command>echo -n %f | wl-copy</command>
+	<description>Copy file path to clipboard</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>

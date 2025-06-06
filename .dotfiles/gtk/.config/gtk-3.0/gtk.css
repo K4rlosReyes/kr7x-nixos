@@ -1,0 +1,298 @@
+/* GTK3 Custom CSS for Catppuccin Theme */
+
+/* Window and container styling */
+window {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* Header bars */
+headerbar {
+    background: linear-gradient(to bottom, #313244, #1e1e2e);
+    border-bottom: 1px solid #45475a;
+    color: #cdd6f4;
+}
+
+headerbar button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #cdd6f4;
+    border-radius: 6px;
+}
+
+headerbar button:hover {
+    background-color: #45475a;
+    border-color: #6c7086;
+}
+
+headerbar button:active {
+    background-color: #585b70;
+}
+
+/* Sidebar styling for file managers */
+.sidebar {
+    background-color: #181825;
+    border-right: 1px solid #313244;
+}
+
+.sidebar row {
+    border-radius: 6px;
+    margin: 2px 6px;
+}
+
+.sidebar row:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+.sidebar row:hover {
+    background-color: #313244;
+}
+
+/* Scrollbars */
+scrollbar {
+    background: #181825;
+    border-radius: 10px;
+}
+
+scrollbar slider {
+    background: #45475a;
+    border-radius: 10px;
+    min-width: 12px;
+    min-height: 12px;
+}
+
+scrollbar slider:hover {
+    background: #585b70;
+}
+
+/* Entry fields */
+entry {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    color: #cdd6f4;
+    padding: 8px 12px;
+}
+
+entry:focus {
+    border-color: #89b4fa;
+    box-shadow: 0 0 0 2px rgba(137, 180, 250, 0.3);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(to bottom, #45475a, #313244);
+    border: 1px solid #6c7086;
+    border-radius: 6px;
+    color: #cdd6f4;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #585b70, #45475a);
+    border-color: #7f849c;
+}
+
+button:active {
+    background: #313244;
+    border-color: #89b4fa;
+}
+
+/* Menus */
+menu,
+.menu {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+menuitem {
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+menuitem:hover {
+    background-color: #45475a;
+}
+
+menuitem:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: #45475a;
+    border: 1px solid #6c7086;
+    border-radius: 6px;
+    color: #cdd6f4;
+}
+
+/* Progress bars */
+progressbar {
+    background-color: #313244;
+    border-radius: 10px;
+}
+
+progressbar progress {
+    background-color: #89b4fa;
+    border-radius: 10px;
+}
+
+/* Treeview (file lists) */
+treeview {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+treeview:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+treeview header button {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    color: #cdd6f4;
+}
+
+treeview header button:hover {
+    background-color: #45475a;
+}
+
+/* Thunar specific styling */
+.thunar {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* Thunar toolbar styling */
+.thunar toolbar {
+    background: linear-gradient(to bottom, #313244, #1e1e2e);
+    border-bottom: 1px solid #45475a;
+    padding: 4px;
+}
+
+.thunar toolbar button {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: #cdd6f4;
+    padding: 6px 10px;
+}
+
+.thunar toolbar button:hover {
+    background-color: #45475a;
+    border-color: #6c7086;
+}
+
+.thunar toolbar button:active {
+    background-color: #585b70;
+}
+
+/* Thunar statusbar */
+.thunar statusbar {
+    background-color: #181825;
+    border-top: 1px solid #313244;
+    color: #cdd6f4;
+    padding: 4px 8px;
+}
+
+/* Thunar location bar */
+.thunar .location-bar {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    color: #cdd6f4;
+}
+
+/* Thunar path bar buttons */
+.thunar .path-bar button {
+    background: transparent;
+    border: none;
+    color: #cdd6f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.thunar .path-bar button:hover {
+    background-color: #45475a;
+}
+
+.thunar .path-bar button:active {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+/* Thunar icon view */
+.thunar iconview {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+.thunar iconview:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+    border-radius: 6px;
+}
+
+.thunar iconview:hover {
+    background-color: #313244;
+    border-radius: 6px;
+}
+
+/* Thunar tree view (detailed view) */
+.thunar treeview {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+.thunar treeview:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+.thunar treeview:hover {
+    background-color: #313244;
+}
+
+/* Thunar side panel */
+.thunar .shortcuts-pane {
+    background-color: #181825;
+    border-right: 1px solid #313244;
+}
+
+.thunar .shortcuts-pane treeview {
+    background-color: #181825;
+}
+
+.thunar .shortcuts-pane treeview:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+    border-radius: 4px;
+}
+
+/* Context menus */
+.thunar menu {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.thunar menuitem {
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #cdd6f4;
+}
+
+.thunar menuitem:hover {
+    background-color: #45475a;
+}
+
+.thunar menuitem:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}

@@ -1,0 +1,182 @@
+/* GTK4 Custom CSS for Catppuccin Theme */
+
+/* Window and container styling */
+window {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* Header bars */
+headerbar {
+    background: linear-gradient(to bottom, #313244, #1e1e2e);
+    border-bottom: 1px solid #45475a;
+    color: #cdd6f4;
+}
+
+headerbar button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #cdd6f4;
+    border-radius: 6px;
+}
+
+headerbar button:hover {
+    background-color: #45475a;
+    border-color: #6c7086;
+}
+
+headerbar button:active {
+    background-color: #585b70;
+}
+
+/* Sidebar styling for file managers */
+.sidebar {
+    background-color: #181825;
+    border-right: 1px solid #313244;
+}
+
+.sidebar row {
+    border-radius: 6px;
+    margin: 2px 6px;
+}
+
+.sidebar row:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+.sidebar row:hover {
+    background-color: #313244;
+}
+
+/* Scrollbars */
+scrollbar {
+    background: #181825;
+}
+
+scrollbar slider {
+    background: #45475a;
+    border-radius: 6px;
+    min-width: 12px;
+    min-height: 12px;
+}
+
+scrollbar slider:hover {
+    background: #585b70;
+}
+
+/* Entry fields */
+entry {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    color: #cdd6f4;
+    padding: 8px 12px;
+}
+
+entry:focus-within {
+    border-color: #89b4fa;
+    outline: 2px solid rgba(137, 180, 250, 0.3);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(to bottom, #45475a, #313244);
+    border: 1px solid #6c7086;
+    border-radius: 6px;
+    color: #cdd6f4;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #585b70, #45475a);
+    border-color: #7f849c;
+}
+
+button:active {
+    background: #313244;
+    border-color: #89b4fa;
+}
+
+/* Popovers and menus */
+popover {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+popover > contents {
+    padding: 4px;
+}
+
+.menu button {
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.menu button:hover {
+    background-color: #45475a;
+}
+
+.menu button:active {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+/* Progress bars */
+progressbar {
+    background-color: #313244;
+    border-radius: 6px;
+}
+
+progressbar > progress {
+    background-color: #89b4fa;
+    border-radius: 6px;
+}
+
+/* List views */
+listview {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+listview row {
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 1px 4px;
+}
+
+listview row:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+listview row:hover {
+    background-color: #313244;
+}
+
+/* Column headers */
+columnview row {
+    padding: 4px 8px;
+}
+
+columnview row:selected {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+columnview row:hover {
+    background-color: #313244;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: #45475a;
+    border: 1px solid #6c7086;
+    border-radius: 6px;
+    color: #cdd6f4;
+    padding: 6px 10px;
+}

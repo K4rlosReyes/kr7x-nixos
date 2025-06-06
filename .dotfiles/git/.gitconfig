@@ -1,0 +1,90 @@
+[user]
+    name = K4rlosReyes
+    email = carlosreyesml18@gmail.com
+
+[core]
+    editor = nvim
+    autocrlf = input
+    safecrlf = true
+    pager = delta
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[merge]
+    tool = nvim
+    conflictstyle = diff3
+
+[diff]
+    tool = nvim
+    colorMoved = default
+
+[delta]
+    navigate = true
+    light = false
+    side-by-side = true
+    line-numbers = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    ca = commit -a
+    cm = commit -m
+    cam = commit -am
+    cp = cherry-pick
+    d = diff
+    dc = diff --cached
+    lg = log --oneline --graph --decorate --all
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    ign = ls-files -o -i --exclude-standard
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk
+    up = !git remote update -p; git merge --ff-only @{u}
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    wip = commit -am "WIP"
+    undo = reset HEAD~1 --mixed
+    amend = commit -a --amend
+    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[credential]
+    helper = store
