@@ -124,18 +124,17 @@ All commands include `--help` for detailed usage information.
 - **Containers**: Docker with proper daemon setup and user permissions
 
 ### Desktop Applications
-- **Browser**: Firefox with privacy enhancements
-- **Terminal**: Alacritty with proper font rendering
+- **Browser**: Brave 
+- **Terminal**: Kitty
 - **File Manager**: Thunar with archive support and plugins
 - **Development**: VS Code, Neovim, Git tools
-- **Media**: MPV media player, basic office tools
-- **Communication**: Discord, email, messaging applications
+- **Media**: MPV media player
 
 ### System Features
-- **Shell**: Zsh with Oh My Zsh, autosuggestions, syntax highlighting
+- **Shell**: Zsh, autosuggestions, syntax highlighting
 - **Prompt**: Starship with custom prompt showing git status, Python env, etc.
 - **Fonts**: Nerd Fonts collection for proper icon rendering
-- **Theme**: Consistent theming with good contrast and readability
+- **Theme**: Consistent theming with good contrast and readability (+-)
 - **Python Aliases**: Modern uv-based workflow (uvi, uvs, uvx commands)
 - **Performance**: Optimized settings for development workloads
 
@@ -144,7 +143,6 @@ All commands include `--help` for detailed usage information.
 This configuration follows a **"security without bloat"** approach:
 
 - **Essential Protection**: Basic firewall, sudo hardening, key kernel settings
-- **No Over-Engineering**: Removed complex systems like AppArmor, Fail2ban, ClamAV
 - **Practical Security**: Focus on protections that matter for development workstations
 - **Maintainable**: Simple configurations that are easy to understand and modify
 - **Performance**: Security measures that don't impact development workflow
@@ -191,12 +189,6 @@ myModules = {
 ## 🔄 Recent Changes & Philosophy
 
 This configuration has been recently **streamlined and simplified**:
-
-### What Was Removed (Bloat Reduction)
-- **Rust support** - Removed language tooling, packages, and VS Code extensions
-- **Complex security** - Removed AppArmor, Fail2ban, ClamAV, extensive audit systems
-- **Over-engineered maintenance** - Simplified from complex backup/migration scripts
-- **Redundant configurations** - Fixed duplicate packages and conflicting settings
 
 ### What Was Enhanced
 - **Python development** - Full uv integration with modern workflow aliases
