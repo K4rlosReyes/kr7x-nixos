@@ -5,6 +5,8 @@
     ./hardware-configuration.nix
     ../../modules/shared/default.nix
     ../../modules/system/optimization.nix
+    ../../modules/system/maintenance.nix
+    ../../modules/system/monitoring.nix
     ../../modules/development/shells.nix
   ];
 
@@ -42,6 +44,14 @@
 
     system = {
       security = {
+        enable = true;
+      };
+      
+      maintenance = {
+        enable = true;
+      };
+      
+      monitoring = {
         enable = true;
       };
       

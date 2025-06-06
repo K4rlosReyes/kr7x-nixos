@@ -92,13 +92,26 @@ A clean, modular NixOS configuration built with flakes, featuring a streamlined 
 
 ## 🔧 Management Commands
 
-The configuration includes helpful management utilities:
+The configuration includes powerful management utilities with enhanced functionality:
 
 ```bash
-system-info    # Display system status and information
-rebuild        # Rebuild and switch to new configuration  
-cleanup        # Clean up Nix store and optimize storage
+# System information with detailed health check
+system-info              # Comprehensive system status and health
+
+# Flexible rebuild options  
+rebuild                   # Quick rebuild and switch
+rebuild --test           # Build and test without activating
+rebuild --boot           # Build and activate on next boot
+rebuild --dry-run        # Show what would be built
+rebuild --rollback       # Rollback to previous generation
+
+# Smart cleanup with options
+cleanup                  # Interactive cleanup (keeps 7 days)
+cleanup --force          # Non-interactive cleanup
+cleanup --keep-days 14   # Keep generations for 14 days
 ```
+
+All commands include `--help` for detailed usage information.
 
 ## 📦 Key Components
 
@@ -228,14 +241,20 @@ Contributions are welcome! This configuration prioritizes:
 # Quick rebuild and switch
 rebuild
 
-# Check system health
+# Check comprehensive system health
 system-info
 
-# Clean up after major changes
+# Clean up after major changes (interactive)
 cleanup
+
+# Test configuration without activating
+rebuild --test
 
 # Check for issues before committing changes
 nix flake check
+
+# Show what would be built
+rebuild --dry-run
 ```
 
 ### Customization Examples
@@ -283,10 +302,13 @@ myModules.desktop.applications = {
 
 **Build Failures:**
 ```bash
-# Check for syntax errors
+# Check for syntax errors and configuration issues
 nix flake check
 
-# Update flake inputs
+# Test build without activating
+rebuild --dry-run
+
+# Update flake inputs if needed
 nix flake update
 
 # Clear cache if corrupted
@@ -295,13 +317,16 @@ sudo rm -rf /nix/var/nix/profiles/system-*-link
 
 **System Issues:**
 ```bash
-# Check system status
+# Comprehensive system status and health check
 system-info
 
 # View recent logs
 journalctl -xe
 
-# Rollback to previous generation
+# Rollback to previous generation (quick method)
+rebuild --rollback
+
+# Or traditional rollback
 sudo nixos-rebuild switch --rollback
 ```
 
@@ -315,6 +340,21 @@ uv self update
 
 # Check Docker permissions
 sudo usermod -aG docker $USER
+
+# Clean development environment
+cleanup --keep-days 3
+```
+
+**Performance Issues:**
+```bash
+# Check system resources
+system-info
+
+# Monitor real-time performance
+btop
+
+# Clean up old generations aggressively
+cleanup --keep-days 1 --force
 ```
 
 ## 📄 License

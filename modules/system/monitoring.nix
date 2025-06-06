@@ -92,17 +92,17 @@ in {
     # System performance tuning
     boot.kernel.sysctl = {
       # Network performance
-      "net.core.default_qdisc" = "fq";
-      "net.ipv4.tcp_congestion_control" = "bbr";
+      "net.core.default_qdisc" = mkDefault "fq";
+      "net.ipv4.tcp_congestion_control" = mkDefault "bbr";
       
       # Virtual memory
-      "vm.swappiness" = 10;
-      "vm.dirty_ratio" = 15;
-      "vm.dirty_background_ratio" = 5;
+      "vm.swappiness" = mkDefault 10;
+      "vm.dirty_ratio" = mkDefault 15;
+      "vm.dirty_background_ratio" = mkDefault 5;
       
       # File system performance
-      "fs.file-max" = 2097152;
-      "fs.inotify.max_user_watches" = 524288;
+      "fs.file-max" = mkDefault 2097152;
+      "fs.inotify.max_user_watches" = mkDefault 524288;
     };
 
     # Systemd service for system health check
