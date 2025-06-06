@@ -9,7 +9,7 @@ in {
     enable = mkEnableOption "development environment";
     
     languages = mkOption {
-      type = types.listOf (types.enum [ "go" "python" "javascript" "rust" "nix" "c" ]);
+      type = types.listOf (types.enum [ "go" "python" "javascript" "nix" "c" ]);
       default = [];
       description = "Programming languages to support";
     };
@@ -112,13 +112,6 @@ in {
       nodePackages.prettier
       nodePackages.eslint
       
-    ] ++ optionals (elem "rust" cfg.languages) [
-      rustc
-      cargo
-      rust-analyzer   # Rust LSP
-      rustfmt         # Rust formatter
-      clippy          # Rust linter
-      
     ] ++ optionals (elem "nix" cfg.languages) [
       nil             # Nix LSP
       nixd            # Alternative Nix LSP
@@ -131,7 +124,6 @@ in {
           # Language support
           golang.go
           ms-python.python
-          rust-lang.rust-analyzer
           bradlc.vscode-tailwindcss
           
           # Nix support

@@ -9,7 +9,7 @@ in {
     enable = mkEnableOption "development shells with direnv";
     
     languages = mkOption {
-      type = types.listOf (types.enum [ "go" "python" "rust" "node" "nix" ]);
+      type = types.listOf (types.enum [ "go" "python" "node" "nix" ]);
       default = [];
       description = "Languages to create development shells for";
     };

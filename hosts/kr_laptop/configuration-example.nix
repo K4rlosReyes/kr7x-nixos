@@ -17,7 +17,7 @@
   # Enhanced development environment
   myModules.development = {
     enable = true;
-    languages = [ "nix" "go" "python" "javascript" "rust" ];
+    languages = [ "nix" "go" "python" "javascript" ];
     editors = [ "neovim" "vscode" ];
     tools = [ "docker" ];
     enableDirenv = true;
@@ -34,11 +34,9 @@
     creativity = [ "gimp" "inkscape" ];
   };
 
-  # Enhanced security
+  # Basic security
   myModules.system.security = {
     enable = true;
-    hardening = true;
-    firewall = true;
   };
 
   # Desktop environment

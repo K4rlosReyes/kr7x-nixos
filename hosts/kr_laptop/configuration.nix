@@ -43,8 +43,6 @@
     system = {
       security = {
         enable = true;
-        hardening = true;
-        firewall = true;
       };
       
       optimization = {
