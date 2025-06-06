@@ -96,13 +96,11 @@ in {
       python3Packages.pip
       python3Packages.virtualenv
       uv              # Fast Python package manager (replaces Poetry)
-      black           # Python formatter
       ruff            # Python linter/formatter (faster than flake8/pylint)
       python3Packages.pytest     # Testing framework
       python3Packages.mypy       # Type checker
       python3Packages.ipython    # Enhanced Python REPL
       python3Packages.jupyterlab # Jupyter notebooks
-      python3Packages.pipenv     # Alternative environment manager
       
     ] ++ optionals (elem "javascript" cfg.languages) [
       nodejs
