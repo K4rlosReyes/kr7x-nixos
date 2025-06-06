@@ -2,7 +2,7 @@
 
 A clean, modular NixOS configuration built with flakes, featuring a streamlined development environment with essential security and practical quality-of-life improvements. Designed for simplicity and maintainability without unnecessary bloat.
 
-> **🎯 Focus**: This configuration prioritizes **practical development** over comprehensive features. It includes everything you need for Go, Python, JavaScript, and Nix development while maintaining system security and performance. Complex features like Rust tooling and heavyweight security systems have been intentionally removed for simplicity.
+> **🎯 Focus**: This configuration prioritizes **practical development** over comprehensive features. It includes everything you need for Go, Python, JavaScript, and Nix development while maintaining system security and performance.
 
 ## ✨ Features
 
@@ -76,7 +76,7 @@ A clean, modular NixOS configuration built with flakes, featuring a streamlined 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/kr7x/nixos-config.git ~/.kr_flake
+   git clone https://github.com/K4rlosReyes/kr7x-nixos.git ~/.kr_flake
    cd ~/.kr_flake
    ```
 
