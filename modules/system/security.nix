@@ -118,7 +118,6 @@ in {
       fail2ban
       clamav
       chkrootkit
-      rkhunter        # Rootkit scanner
       lynis           # Security auditing
       aide            # File integrity checker
     ]);
