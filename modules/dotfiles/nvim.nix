@@ -229,10 +229,9 @@ EOF
       python3  # For Python support
       gcc  # For treesitter compilation
       
-      # LSP servers (instead of using Mason)
+      # LSP servers (minimal set - full set managed by development.nix)
+      # Only include if development module is not enabled
       lua-language-server  # For Lua
-      nil  # For Nix
-      nixd  # Alternative Nix LSP
       stylua  # Lua formatter
     ];
     

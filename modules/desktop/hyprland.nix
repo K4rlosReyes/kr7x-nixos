@@ -129,5 +129,19 @@ in {
         auth include login
       '';
     };
+
+    # Font configuration for better rendering
+    fonts.fontconfig = {
+      enable = true;
+      antialias = true;
+      hinting = {
+        enable = true;
+        style = "slight";
+      };
+      subpixel.rgba = "rgb";
+    };
+
+    # Note: XDG portals, Audio, Bluetooth, and Thumbnail services 
+    # are configured in their respective modules
   };
 }

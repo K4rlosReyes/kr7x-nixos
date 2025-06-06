@@ -59,6 +59,17 @@
       alias gl='git pull'
       alias gd='git diff'
       alias lg='lazygit'
+      
+      # Python/uv aliases (modern Python development)
+      alias py='python3'
+      alias pip='uv pip'  # Use uv for pip operations
+      alias uvx='uv tool run'  # Run tools with uv
+      alias uvi='uv pip install'
+      alias uvs='uv pip sync'
+      alias uvr='uv run'
+      alias pactivate='source .venv/bin/activate'  # Virtual environment activation
+      alias pdeactivate='deactivate'
+      alias pnew='uv venv && source .venv/bin/activate'  # Create and activate new venv
     '';
   };
 
@@ -98,7 +109,7 @@
     bat      # Better cat
     fd       # Better find
     ripgrep  # Better grep
-    btop     # Better top
+    # btop moved to monitoring.nix
     procs    # Better ps
     du-dust  # Better du
     duf      # Better df

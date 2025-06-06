@@ -57,7 +57,7 @@ in {
       wget
       curl
       htop
-      btop
+      # btop managed by monitoring.nix
       unzip
       zip
       p7zip

@@ -17,15 +17,6 @@
 
   outputs = { self, nixpkgs, nixpkgs-stable, nixos-hardware, nur, hyprland, ... }@inputs: {
     nixosConfigurations = {
-      # Desktop system
-      desktop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/desktop/configuration.nix
-        ];
-      };
-      
       # Laptop system
       kr_laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

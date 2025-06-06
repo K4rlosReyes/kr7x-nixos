@@ -60,7 +60,7 @@ in {
       fd              # Better find
       ripgrep         # Better grep
       bat             # Better cat
-      exa             # Better ls
+      eza             # Better ls
       delta           # Better git diff
       lazygit         # Git TUI
       gh              # GitHub CLI
@@ -95,9 +95,14 @@ in {
       python3
       python3Packages.pip
       python3Packages.virtualenv
-      python3Packages.poetry
+      uv              # Fast Python package manager (replaces Poetry)
       black           # Python formatter
-      ruff            # Python linter
+      ruff            # Python linter/formatter (faster than flake8/pylint)
+      python3Packages.pytest     # Testing framework
+      python3Packages.mypy       # Type checker
+      python3Packages.ipython    # Enhanced Python REPL
+      python3Packages.jupyterlab # Jupyter notebooks
+      python3Packages.pipenv     # Alternative environment manager
       
     ] ++ optionals (elem "javascript" cfg.languages) [
       nodejs

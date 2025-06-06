@@ -34,8 +34,9 @@
   # Common system configuration
   system = {
     stateVersion = "24.11";
-    autoUpgrade = {
-      enable = true;
+    # Auto-upgrade configuration (can be overridden by security module)
+    autoUpgrade = lib.mkDefault {
+      enable = false;  # Disabled by default, security module can override
       allowReboot = false;
       dates = "weekly";
     };
