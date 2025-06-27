@@ -27,7 +27,7 @@ max-icon-size=48
 icon-location=left
 
 # Font
-font=JetBrainsMono Nerd Font 11
+font=JetBrainsMono Nerd Font 9
 
 # Grouping
 group-by=app-name
