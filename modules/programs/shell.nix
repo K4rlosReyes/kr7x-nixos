@@ -3,21 +3,6 @@
 {
   programs.zsh = {
     enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [ 
-        "git" 
-        "sudo" 
-        "docker" 
-        "history" 
-        "direnv"
-        "kubectl"
-        "terraform"
-        "systemd"
-        "fzf"
-      ];
-      theme = "agnoster";  # Better theme with git info
-    };
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
     
@@ -100,7 +85,6 @@
 
   environment.systemPackages = with pkgs; [
     zsh
-    oh-my-zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
     starship
