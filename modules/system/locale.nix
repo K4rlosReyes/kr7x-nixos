@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  time.timeZone = "Europe/Madrid";
+  time.timeZone = "Africa/Malabo";
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
