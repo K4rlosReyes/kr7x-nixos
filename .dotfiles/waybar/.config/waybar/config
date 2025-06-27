@@ -9,22 +9,33 @@
     "modules-right": ["wireplumber", "battery", "backlight", "hyprland/language", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
-        "format": "<span size='larger'>{icon}</span>",
-        "on-click": "activate",
-        "format-icons": {
-            "active": "\uf444",
-            "default": "\uf4c3"
-        },
-        "icon-size": 10,
-        "sort-by-number": true,
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-        }
-    },
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"1": "\uf120",
+			"2": "\uf268",
+			"3": "\uf121",
+			"4": "\uf15c",
+			"5": "\uf07b",
+			"6": "\uf001",
+			"7": "\uf11b",
+			"8": "\uf086",
+			"9": "\uf013",
+			"10": "\uf2d0",
+		},
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": []
+		}
+	},
 
     "clock": {
         "format": "{:%d.%m.%Y | %H:%M}"
