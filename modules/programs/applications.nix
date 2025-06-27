@@ -127,9 +127,6 @@ in {
       bottles
       mangohud
       gamescope
-      
-      # Game development
-      godot_4
     ];
 
     # Fonts for better application support
