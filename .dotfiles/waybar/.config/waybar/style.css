@@ -15,16 +15,16 @@
 }
 
 #workspaces button {
-    color: #6c7086; /* or whatever gray you prefer like #6c7086 */
+    color: #6c7086;
     background: transparent;
     border: none;
-    padding: 0 8px;
+    padding: 0 6px;
     border-radius: 8px;
     transition: all 0.2s ease;
 }
 
 #workspaces button.active {
-    color: #ffffff; /* White for active workspace */
+    color: #cdd6f4;
 }
 
 #workspaces button:hover {
