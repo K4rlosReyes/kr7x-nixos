@@ -104,7 +104,7 @@ in {
       pamixer
       
       # Notifications
-      dunst
+      mako
       libnotify
       
       # Desktop portal
