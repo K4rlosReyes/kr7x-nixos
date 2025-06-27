@@ -1,0 +1,44 @@
+# Mako Catppuccin Mocha Configuration
+
+# Colors
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=#a6e3a1
+
+# Border and corners
+border-size=2
+border-radius=12
+
+# Size and positioning
+width=350
+height=100
+margin=10
+padding=15
+
+# Behavior
+default-timeout=8000
+ignore-timeout=1
+max-visible=5
+sort=-time
+
+# Icon settings
+max-icon-size=48
+icon-location=left
+
+# Font
+font=JetBrainsMono Nerd Font 11
+
+# Grouping
+group-by=app-name
+
+# Low urgency notifications (subtle)
+[urgency=low]
+border-color=#6c7086
+default-timeout=4000
+
+# Critical notifications (attention-grabbing)
+[urgency=critical]
+border-color=#f38ba8
+default-timeout=0
+ignore-timeout=1
