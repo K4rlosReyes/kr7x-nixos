@@ -1,182 +1,324 @@
-/* GTK4 Custom CSS for Catppuccin Theme */
+/* GTK4 Custom CSS for macOS-style Catppuccin Theme */
 
 /* Window and container styling */
 window {
     background-color: #1e1e2e;
     color: #cdd6f4;
+    border-radius: 12px; /* macOS-style rounded corners */
 }
 
-/* Header bars */
+/* Header bars - macOS style with traffic lights area */
 headerbar {
-    background: linear-gradient(to bottom, #313244, #1e1e2e);
-    border-bottom: 1px solid #45475a;
+    background: linear-gradient(to bottom, #24273a, #1e1e2e);
+    border-bottom: 1px solid #363a4f;
     color: #cdd6f4;
+    border-radius: 12px 12px 0 0;
+    min-height: 44px; /* macOS standard height */
+    padding: 0 16px;
 }
 
 headerbar button {
     background: transparent;
     border: 1px solid transparent;
     color: #cdd6f4;
-    border-radius: 6px;
+    border-radius: 8px;
+    min-width: 32px;
+    min-height: 32px;
+    margin: 6px 2px;
 }
 
 headerbar button:hover {
-    background-color: #45475a;
-    border-color: #6c7086;
+    background-color: rgba(69, 71, 90, 0.8);
+    border-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
 headerbar button:active {
-    background-color: #585b70;
+    background-color: rgba(88, 91, 112, 0.9);
+    transform: scale(0.95);
+}
+
+/* macOS-style window controls */
+headerbar .titlebutton {
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+    border: none;
+}
+
+headerbar .titlebutton.close {
+    background-color: #ed8796;
+}
+
+headerbar .titlebutton.minimize {
+    background-color: #f5a97f;
+}
+
+headerbar .titlebutton.maximize {
+    background-color: #a6da95;
 }
 
 /* Sidebar styling for file managers */
 .sidebar {
-    background-color: #181825;
-    border-right: 1px solid #313244;
+    background-color: rgba(24, 24, 37, 0.8);
+    border-right: 1px solid #363a4f;
+    backdrop-filter: blur(20px);
 }
 
 .sidebar row {
-    border-radius: 6px;
-    margin: 2px 6px;
+    border-radius: 8px;
+    margin: 2px 8px;
+    padding: 8px 12px;
 }
 
 .sidebar row:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 .sidebar row:hover {
-    background-color: #313244;
+    background-color: rgba(49, 50, 68, 0.8);
 }
 
-/* Scrollbars */
+/* Scrollbars - macOS style */
 scrollbar {
-    background: #181825;
+    background: transparent;
+    border-radius: 8px;
 }
 
 scrollbar slider {
-    background: #45475a;
-    border-radius: 6px;
-    min-width: 12px;
-    min-height: 12px;
+    background: rgba(69, 71, 90, 0.8);
+    border-radius: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    margin: 2px;
+    border: none;
 }
 
 scrollbar slider:hover {
-    background: #585b70;
+    background: rgba(88, 91, 112, 0.9);
+    min-width: 12px;
+    min-height: 12px;
+    margin: 0;
+    transition: all 0.2s ease;
 }
 
 /* Entry fields */
 entry {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 6px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+    border-radius: 8px;
     color: #cdd6f4;
-    padding: 8px 12px;
+    padding: 10px 16px;
+    backdrop-filter: blur(10px);
 }
 
 entry:focus-within {
     border-color: #89b4fa;
-    outline: 2px solid rgba(137, 180, 250, 0.3);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.2);
 }
 
-/* Buttons */
+/* Buttons - macOS style */
 button {
-    background: linear-gradient(to bottom, #45475a, #313244);
-    border: 1px solid #6c7086;
-    border-radius: 6px;
+    background: rgba(69, 71, 90, 0.8);
+    border: 1px solid rgba(108, 112, 134, 0.5);
+    border-radius: 8px;
     color: #cdd6f4;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #585b70, #45475a);
-    border-color: #7f849c;
+    background: rgba(88, 91, 112, 0.9);
+    border-color: rgba(127, 132, 156, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-    background: #313244;
+    background: rgba(49, 50, 68, 0.9);
     border-color: #89b4fa;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Popovers and menus */
+/* Popovers and menus - macOS style */
 popover {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 8px;
-    padding: 4px;
+    background-color: rgba(49, 50, 68, 0.95);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+    border-radius: 12px;
+    padding: 8px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 popover > contents {
     padding: 4px;
 }
 
+/* Menu styling - key macOS-like changes */
+.menu {
+    background: rgba(49, 50, 68, 0.95);
+    border-radius: 10px;
+    padding: 6px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(69, 71, 90, 0.6);
+}
+
 .menu button {
     background: transparent;
     border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin: 1px;
+    color: #cdd6f4;
+    font-weight: 400;
+    text-align: left;
+    transition: all 0.15s ease;
 }
 
 .menu button:hover {
-    background-color: #45475a;
+    background-color: rgba(137, 180, 250, 0.15);
+    color: #89b4fa;
+    backdrop-filter: blur(5px);
 }
 
 .menu button:active {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    transform: scale(0.98);
+}
+
+/* Menu separators */
+.menu separator {
+    background-color: rgba(69, 71, 90, 0.6);
+    min-height: 1px;
+    margin: 4px 12px;
+    border-radius: 1px;
+}
+
+/* Menu mnemonics and accelerators */
+.menu button label {
+    color: inherit;
+}
+
+.menu button:disabled {
+    color: rgba(205, 214, 244, 0.5);
+    background: transparent;
+}
+
+.menu button:disabled:hover {
+    background: transparent;
+    color: rgba(205, 214, 244, 0.5);
+}
+
+/* Menu items with icons */
+.menu button image {
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+.menu button:hover image {
+    opacity: 1;
+}
+
+/* Submenu indicators */
+.menu button.has-submenu::after {
+    content: "▶";
+    margin-left: auto;
+    color: rgba(205, 214, 244, 0.6);
+    font-size: 0.8em;
 }
 
 /* Progress bars */
 progressbar {
-    background-color: #313244;
-    border-radius: 6px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
 }
 
 progressbar > progress {
     background-color: #89b4fa;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 /* List views */
 listview {
-    background-color: #1e1e2e;
+    background-color: rgba(30, 30, 46, 0.9);
     color: #cdd6f4;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
 }
 
 listview row {
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 6px;
-    margin: 1px 4px;
+    margin: 1px 6px;
+    transition: all 0.15s ease;
 }
 
 listview row:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 listview row:hover {
-    background-color: #313244;
+    background-color: rgba(49, 50, 68, 0.8);
 }
 
 /* Column headers */
 columnview row {
-    padding: 4px 8px;
+    padding: 6px 12px;
+    transition: all 0.15s ease;
 }
 
 columnview row:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 columnview row:hover {
-    background-color: #313244;
+    background-color: rgba(49, 50, 68, 0.8);
 }
 
-/* Tooltips */
+/* Tooltips - macOS style */
 tooltip {
-    background-color: #45475a;
-    border: 1px solid #6c7086;
-    border-radius: 6px;
+    background-color: rgba(69, 71, 90, 0.95);
+    border: 1px solid rgba(108, 112, 134, 0.5);
+    border-radius: 8px;
     color: #cdd6f4;
-    padding: 6px 10px;
+    padding: 8px 12px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    font-size: 0.9em;
+}
+
+/* Context menus - special styling */
+.context-menu {
+    background: rgba(49, 50, 68, 0.98);
+    border-radius: 10px;
+    padding: 4px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+}
+
+/* Searchbar in menus */
+.menu searchbar {
+    margin: 4px;
+    padding: 2px;
+}
+
+.menu searchbar entry {
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9em;
 }

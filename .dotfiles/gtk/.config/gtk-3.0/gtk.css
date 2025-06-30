@@ -1,211 +1,305 @@
-/* GTK3 Custom CSS for Catppuccin Theme */
+/* GTK3 Custom CSS for macOS-style Catppuccin Theme */
 
 /* Window and container styling */
 window {
     background-color: #1e1e2e;
     color: #cdd6f4;
+    border-radius: 12px;
 }
 
-/* Header bars */
+/* Header bars - macOS style */
 headerbar {
-    background: linear-gradient(to bottom, #313244, #1e1e2e);
-    border-bottom: 1px solid #45475a;
+    background: linear-gradient(to bottom, #24273a, #1e1e2e);
+    border-bottom: 1px solid #363a4f;
     color: #cdd6f4;
+    border-radius: 12px 12px 0 0;
+    min-height: 44px;
+    padding: 0 16px;
 }
 
 headerbar button {
     background: transparent;
     border: 1px solid transparent;
     color: #cdd6f4;
-    border-radius: 6px;
+    border-radius: 8px;
+    min-width: 32px;
+    min-height: 32px;
+    margin: 6px 2px;
+    transition: all 0.2s ease;
 }
 
 headerbar button:hover {
-    background-color: #45475a;
-    border-color: #6c7086;
+    background-color: rgba(69, 71, 90, 0.8);
+    border-color: transparent;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 headerbar button:active {
-    background-color: #585b70;
+    background-color: rgba(88, 91, 112, 0.9);
+    transform: scale(0.95);
+}
+
+/* macOS-style window controls */
+.titlebutton {
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+    border: none;
+}
+
+.titlebutton.close {
+    background-color: #ed8796;
+}
+
+.titlebutton.minimize {
+    background-color: #f5a97f;
+}
+
+.titlebutton.maximize {
+    background-color: #a6da95;
 }
 
 /* Sidebar styling for file managers */
 .sidebar {
-    background-color: #181825;
-    border-right: 1px solid #313244;
+    background-color: rgba(24, 24, 37, 0.9);
+    border-right: 1px solid #363a4f;
 }
 
 .sidebar row {
-    border-radius: 6px;
-    margin: 2px 6px;
+    border-radius: 8px;
+    margin: 2px 8px;
+    padding: 8px 12px;
+    transition: all 0.15s ease;
 }
 
 .sidebar row:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 .sidebar row:hover {
-    background-color: #313244;
+    background-color: rgba(49, 50, 68, 0.8);
 }
 
-/* Scrollbars */
+/* Scrollbars - macOS style */
 scrollbar {
-    background: #181825;
-    border-radius: 10px;
+    background: transparent;
+    border-radius: 8px;
 }
 
 scrollbar slider {
-    background: #45475a;
-    border-radius: 10px;
-    min-width: 12px;
-    min-height: 12px;
+    background: rgba(69, 71, 90, 0.8);
+    border-radius: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    margin: 2px;
+    border: none;
+    transition: all 0.2s ease;
 }
 
 scrollbar slider:hover {
-    background: #585b70;
+    background: rgba(88, 91, 112, 0.9);
+    min-width: 12px;
+    min-height: 12px;
+    margin: 0;
 }
 
 /* Entry fields */
 entry {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 6px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+    border-radius: 8px;
     color: #cdd6f4;
-    padding: 8px 12px;
+    padding: 10px 16px;
+    transition: all 0.2s ease;
 }
 
 entry:focus {
     border-color: #89b4fa;
-    box-shadow: 0 0 0 2px rgba(137, 180, 250, 0.3);
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.2);
+    outline: none;
 }
 
-/* Buttons */
+/* Buttons - macOS style */
 button {
-    background: linear-gradient(to bottom, #45475a, #313244);
-    border: 1px solid #6c7086;
-    border-radius: 6px;
+    background: rgba(69, 71, 90, 0.8);
+    border: 1px solid rgba(108, 112, 134, 0.5);
+    border-radius: 8px;
     color: #cdd6f4;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #585b70, #45475a);
-    border-color: #7f849c;
+    background: rgba(88, 91, 112, 0.9);
+    border-color: rgba(127, 132, 156, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-    background: #313244;
+    background: rgba(49, 50, 68, 0.9);
     border-color: #89b4fa;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Menus */
+/* Menus - macOS style */
 menu,
 .menu {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 8px;
-    padding: 4px;
+    background-color: rgba(49, 50, 68, 0.95);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 menuitem {
-    border-radius: 4px;
-    padding: 8px 12px;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin: 1px;
+    color: #cdd6f4;
+    transition: all 0.15s ease;
 }
 
 menuitem:hover {
-    background-color: #45475a;
+    background-color: rgba(137, 180, 250, 0.15);
+    color: #89b4fa;
 }
 
 menuitem:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    transform: scale(0.98);
 }
 
-/* Tooltips */
+/* Menu separators */
+separator {
+    background-color: rgba(69, 71, 90, 0.6);
+    min-height: 1px;
+    margin: 4px 12px;
+    border-radius: 1px;
+}
+
+/* Tooltips - macOS style */
 tooltip {
-    background-color: #45475a;
-    border: 1px solid #6c7086;
-    border-radius: 6px;
+    background-color: rgba(69, 71, 90, 0.95);
+    border: 1px solid rgba(108, 112, 134, 0.5);
+    border-radius: 8px;
     color: #cdd6f4;
+    padding: 8px 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    font-size: 0.9em;
 }
 
 /* Progress bars */
 progressbar {
-    background-color: #313244;
-    border-radius: 10px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 8px;
 }
 
 progressbar progress {
     background-color: #89b4fa;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 /* Treeview (file lists) */
 treeview {
-    background-color: #1e1e2e;
+    background-color: rgba(30, 30, 46, 0.9);
     color: #cdd6f4;
+    border-radius: 8px;
 }
 
 treeview:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
+}
+
+treeview:hover {
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 6px;
 }
 
 treeview header button {
-    background-color: #313244;
-    border: 1px solid #45475a;
+    background-color: rgba(49, 50, 68, 0.8);
+    border: 1px solid rgba(69, 71, 90, 0.8);
     color: #cdd6f4;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
 treeview header button:hover {
-    background-color: #45475a;
+    background-color: rgba(69, 71, 90, 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Thunar specific styling */
+/* Thunar specific styling - macOS enhanced */
 .thunar {
     background-color: #1e1e2e;
     color: #cdd6f4;
+    border-radius: 12px;
 }
 
 /* Thunar toolbar styling */
 .thunar toolbar {
-    background: linear-gradient(to bottom, #313244, #1e1e2e);
-    border-bottom: 1px solid #45475a;
-    padding: 4px;
+    background: linear-gradient(to bottom, #24273a, #1e1e2e);
+    border-bottom: 1px solid #363a4f;
+    border-radius: 12px 12px 0 0;
+    padding: 8px;
+    min-height: 44px;
 }
 
 .thunar toolbar button {
     background: transparent;
     border: 1px solid transparent;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #cdd6f4;
-    padding: 6px 10px;
+    padding: 8px 12px;
+    margin: 2px;
+    transition: all 0.2s ease;
 }
 
 .thunar toolbar button:hover {
-    background-color: #45475a;
-    border-color: #6c7086;
+    background-color: rgba(69, 71, 90, 0.8);
+    border-color: transparent;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .thunar toolbar button:active {
-    background-color: #585b70;
+    background-color: rgba(88, 91, 112, 0.9);
+    transform: scale(0.95);
 }
 
 /* Thunar statusbar */
 .thunar statusbar {
-    background-color: #181825;
-    border-top: 1px solid #313244;
+    background-color: rgba(24, 24, 37, 0.9);
+    border-top: 1px solid #363a4f;
+    border-radius: 0 0 12px 12px;
     color: #cdd6f4;
-    padding: 4px 8px;
+    padding: 8px 16px;
+    font-size: 0.9em;
 }
 
 /* Thunar location bar */
 .thunar .location-bar {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 6px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+    border-radius: 8px;
     color: #cdd6f4;
+    transition: all 0.2s ease;
+}
+
+.thunar .location-bar:focus {
+    border-color: #89b4fa;
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.2);
 }
 
 /* Thunar path bar buttons */
@@ -213,86 +307,182 @@ treeview header button:hover {
     background: transparent;
     border: none;
     color: #cdd6f4;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 1px;
+    transition: all 0.15s ease;
 }
 
 .thunar .path-bar button:hover {
-    background-color: #45475a;
+    background-color: rgba(69, 71, 90, 0.8);
+    color: #89b4fa;
 }
 
 .thunar .path-bar button:active {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    transform: scale(0.98);
 }
 
 /* Thunar icon view */
 .thunar iconview {
-    background-color: #1e1e2e;
+    background-color: rgba(30, 30, 46, 0.9);
     color: #cdd6f4;
+    border-radius: 8px;
+    padding: 8px;
 }
 
 .thunar iconview:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 .thunar iconview:hover {
-    background-color: #313244;
-    border-radius: 6px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 8px;
 }
 
 /* Thunar tree view (detailed view) */
 .thunar treeview {
-    background-color: #1e1e2e;
+    background-color: rgba(30, 30, 46, 0.9);
     color: #cdd6f4;
+    border-radius: 8px;
 }
 
 .thunar treeview:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
 }
 
 .thunar treeview:hover {
-    background-color: #313244;
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 6px;
 }
 
 /* Thunar side panel */
 .thunar .shortcuts-pane {
-    background-color: #181825;
-    border-right: 1px solid #313244;
+    background-color: rgba(24, 24, 37, 0.9);
+    border-right: 1px solid #363a4f;
+    border-radius: 0 0 0 12px;
 }
 
 .thunar .shortcuts-pane treeview {
-    background-color: #181825;
+    background-color: transparent;
+    padding: 4px;
 }
 
 .thunar .shortcuts-pane treeview:selected {
-    background-color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.9);
     color: #1e1e2e;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(137, 180, 250, 0.3);
+    margin: 2px 6px;
 }
 
-/* Context menus */
+.thunar .shortcuts-pane treeview:hover {
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 6px;
+    margin: 2px 6px;
+}
+
+/* Context menus - enhanced macOS style */
 .thunar menu {
-    background-color: #313244;
-    border: 1px solid #45475a;
+    background-color: rgba(49, 50, 68, 0.98);
+    border: 1px solid rgba(69, 71, 90, 0.8);
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.thunar menuitem {
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: #cdd6f4;
+    margin: 1px;
+    transition: all 0.15s ease;
+}
+
+.thunar menuitem:hover {
+    background-color: rgba(137, 180, 250, 0.15);
+    color: #89b4fa;
+}
+
+.thunar menuitem:selected {
+    background-color: rgba(137, 180, 250, 0.9);
+    color: #1e1e2e;
+    transform: scale(0.98);
+}
+
+/* Thunar menu separators */
+.thunar menu separator {
+    background-color: rgba(69, 71, 90, 0.6);
+    min-height: 1px;
+    margin: 4px 12px;
+    border-radius: 1px;
+}
+
+/* Thunar menu items with icons */
+.thunar menuitem image {
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+.thunar menuitem:hover image {
+    opacity: 1;
+}
+
+/* Thunar disabled menu items */
+.thunar menuitem:disabled {
+    color: rgba(205, 214, 244, 0.5);
+    background: transparent;
+}
+
+.thunar menuitem:disabled:hover {
+    background: transparent;
+    color: rgba(205, 214, 244, 0.5);
+}
+
+/* Thunar menu mnemonics */
+.thunar menuitem accelerator {
+    color: rgba(205, 214, 244, 0.6);
+    margin-left: auto;
+    font-size: 0.85em;
+}
+
+/* Thunar search bar */
+.thunar searchbar {
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 8px;
+    padding: 4px;
+    margin: 8px;
+}
+
+.thunar searchbar entry {
+    background-color: rgba(24, 24, 37, 0.8);
+    border: 1px solid rgba(69, 71, 90, 0.6);
+}
+
+/* Thunar zoom controls */
+.thunar .zoom-controls {
+    background-color: rgba(49, 50, 68, 0.8);
     border-radius: 8px;
     padding: 4px;
 }
 
-.thunar menuitem {
-    border-radius: 4px;
-    padding: 8px 12px;
+.thunar .zoom-controls button {
+    background: transparent;
+    border: none;
     color: #cdd6f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.15s ease;
 }
 
-.thunar menuitem:hover {
-    background-color: #45475a;
-}
-
-.thunar menuitem:selected {
-    background-color: #89b4fa;
-    color: #1e1e2e;
+.thunar .zoom-controls button:hover {
+    background-color: rgba(69, 71, 90, 0.8);
+    color: #89b4fa;
 }
